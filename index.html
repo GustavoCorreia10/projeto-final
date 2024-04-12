@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icons8-dog-96.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>CRIE O PERFIL DO SEU PET &#128062</h1>
+        <form id="profileForm">
+            <label for="name">Nome do Pet:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="photo">Foto do Pet:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <label for="bio">Biografia:</label>
+            <textarea id="bio" name="bio" required></textarea>
+
+            <label for="socialLinks">Link para Redes Sociais:</label>
+            <input type="url" id="socialLinks" name="socialLinks">
+
+            <button type="button" onclick="submitProfile()">Criar Perfil</button>
+        </form>
+        <div id="profilePreview">
+            <h2>Pré-visualização do Perfil:</h2>
+            <p><strong>Nome:</strong> <span id="previewName"></span></p>
+            <img id="previewPhoto" src="" alt="Foto do Pet" hidden>
+            <p><strong>Biografia:</strong> <span id="previewBio"></span></p>
+            <p><strong>Link para Doações:</strong> <a id="previewLink" href="" target="_blank">Clique aqui</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
